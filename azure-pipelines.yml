@@ -25,10 +25,10 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: '**/.war'
-    TargetFolder: '(build.artifactstagingdirectory)'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 - task: CopyPublishBuildArtifacts@1
   inputs:
-    CopyRoot: '(Agent.BuildDirectory)'
+    CopyRoot: '$(Agent.BuildDirectory)'
     Contents: '**/.war'
     ArtifactName: 'warfile'
     ArtifactType: 'Container'
