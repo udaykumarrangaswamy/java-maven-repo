@@ -8,8 +8,8 @@ trigger:
 
 pool:
   name: Default
-  # demands:
-  #  - agent.name -equals DESKTOP-TAME9AS
+  demands:
+   - agent.name -equals DESKTOP-TAME9AS
 
 steps:
 - task: Maven@3
